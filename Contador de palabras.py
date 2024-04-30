@@ -1,3 +1,3 @@
-texto = input ("Por favor ingrese texto: ")
+texto = input ("Por favor ingrese un texto: ")
 CantEspacios = texto.count(' ')
 print (CantEspacios + 1)
