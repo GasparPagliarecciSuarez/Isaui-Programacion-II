@@ -1,5 +1,5 @@
 #Calculadora promedio 3 num
-print("Para calcular el promedio entre 3 números siga las siguientes intrucciones")
+print("Para calcular el promedio entre 3 números siga las intrucciones")
 num1= float(input("Ingrese el primer número: "))
 num2= float(input("Ingrese el segundo número: "))
 num3= float(input("Ingrese el tercer número: "))
