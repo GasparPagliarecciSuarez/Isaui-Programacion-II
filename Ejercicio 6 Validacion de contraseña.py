@@ -22,7 +22,7 @@ if re.search(r'[a-z]', contraseña):
 
 
 if contador == 6:
-    print("Su contraseña es correcta")
+    print("Su contraseña cumple con los estandares")
 
 else:
     print("Su contraseña no cumple con los estandares requeridos, por favor intente nuevamente con las instrucciones dadas")
