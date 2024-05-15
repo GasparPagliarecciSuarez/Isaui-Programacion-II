@@ -1,7 +1,5 @@
 import random
 import re
-
-
 Palabras = ["melon", "sandia", "banana", "guayaba", "manzana", "pera", "uva", "kiwi", "maracuya", "anana", "frutilla", "cereza", "durazno", 'ciruela']
 PalabraRandom = random.choice(Palabras)
 Vidas= 6
@@ -12,7 +10,6 @@ LetrasMal = ''
 cont = 0
 print("Vamos a comenzar el juego del ahoracado de las frutas, ingresa una letra para comenzar a adivinar")
 print("La palabra tiene: ", len(PalabraRandom),"letras")
-
 
 while Vidas>=1:
         Letra = input('Ingreser su letra: ').lower()
