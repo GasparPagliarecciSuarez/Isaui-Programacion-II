@@ -2,7 +2,7 @@ def Merge_Diccionarios(Dic1, Dic2):
     diccionario_Combinado = {}
     diccionario_Combinado = Dic1.copy()
     diccionario_Combinado.update(Dic2)
-    return print ("El nuevo diccionario combinado es: ", diccionario_Combinado)
+    return print ("El nuevo diccionario combinado es:  ", diccionario_Combinado)
     
 Dic1 = {}
 Dic2 = {}
