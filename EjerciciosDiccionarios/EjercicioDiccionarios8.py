@@ -2,28 +2,19 @@
 #devuelva un diccionario con la frecuencia de cada palabra.
 def Diccionario_Frecuencias(lista):
     diccFrec={}
-    clave = ""
-    cont = 0
-    valor = 0
-    contpal= 0
     for palabras in lista:
-        clave = palabras
-        for palabras in lista:
-            if palabras in lista:
-                diccFrec[clave] = cont
-                cont +=1
-               
-            
-        
-        
-
-    resultado = cont
+        if palabras in diccFrec:
+            diccFrec[palabras] +=1
+        else:
+            diccFrec[palabras] = 1
+           
     print (diccFrec)
-    return print (resultado)
+    return print (diccFrec)
 
 
-lista= ["hola", "buenas", "chau", "tardes", "hola", "hola"]
+lista= ["hola", "buenas", "chau", "tardes", "hola", "hola", '']
 frec= Diccionario_Frecuencias(lista)
+
 
         
    
