@@ -9,6 +9,30 @@ ventana.resizable (False,False)
 
 
 def calcular():
+    try:
+        n1=float(Entry_1_var.get())
+        n2= float(Entry_2_var.get())
+    except ValueError:
+            modal= tkinter.Toplevel(ventana)
+            modal.geometry("200x100")
+            modal.title('Error')
+            modal.resizable(0,0)
+
+            error=tkinter.Label(modal,text="No puedes ingresar letras")
+            error.pack(pady=20)
+
+   
+            close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
+            close_button.pack(pady=5)
+
+            Entry_1_var.set('')
+            Entry_2_var.set('')
+
+                 
+            n1 = float(Entry_1_var.get())
+            n2 = float(Entry_2_var.get())
+            resultado = float(n1 + n2)
+            
     n1 = float(Entry_1_var.get())
     n2 = float(Entry_2_var.get())
     operacion = opcion_var.get()

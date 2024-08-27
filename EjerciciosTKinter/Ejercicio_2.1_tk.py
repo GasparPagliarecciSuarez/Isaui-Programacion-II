@@ -22,6 +22,8 @@ def sumar():
    
             close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
             close_button.pack(pady=5)
+            Entry_1_var.set('')
+            Entry_2_var.set('')
 
                  
             n1 = float(Entry_1_var.get())
@@ -49,6 +51,8 @@ def restar():
    
             close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
             close_button.pack(pady=5)
+            Entry_1_var.set('')
+            Entry_2_var.set('')
 
                  
             n1 = float(Entry_1_var.get())
@@ -79,6 +83,8 @@ def multiplicar():
    
             close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
             close_button.pack(pady=5)
+            Entry_1_var.set('')
+            Entry_2_var.set('')
 
                  
             n1 = float(Entry_1_var.get())
@@ -108,6 +114,8 @@ def dividir():
    
             close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
             close_button.pack(pady=5)
+            Entry_1_var.set('')
+            Entry_2_var.set('')
 
                  
             n1 = float(Entry_1_var.get())
@@ -137,6 +145,10 @@ def porcentaje():
    
             close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
             close_button.pack(pady=5)
+
+            Entry_1_var.set('')
+            Entry_2_var.set('')
+
 
                  
             n1 = float(Entry_1_var.get())

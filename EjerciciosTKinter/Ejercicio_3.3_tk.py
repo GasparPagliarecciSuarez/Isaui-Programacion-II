@@ -90,6 +90,26 @@ def calcular():
 
 #Entry_3_var.set(round(resultado,4))
 def comparar():
+
+    try:
+        entrada_usuario=float(Entry_3_var.get())
+    except ValueError:
+            modal= tkinter.Toplevel(ventana)
+            modal.geometry("200x100")
+            modal.title('Error')
+            modal.resizable(0,0)
+
+            error=tkinter.Label(modal,text="No puedes ingresar letras")
+            error.pack(pady=20)
+
+            close_button = tkinter.Button(modal, text="Cerrar", command=modal.destroy)
+            close_button.pack(pady=5)
+
+            Entry_1_var.set('')
+            Entry_2_var.set('')
+            Entry_3_var.set('')
+            opcion_var.set('')
+            
     global juegos, buenos, malos
     calculado = calcular()
     entrada_usuario = float(Entry_3_var.get())
