@@ -4,7 +4,7 @@ import random
 
 ventana= tkinter.Tk()
 ventana.geometry("600x400")
-ventana.title("Juego Matematico")
+ventana.title("calculadora")
 ventana.resizable (False,False)
 
 juegos = 0

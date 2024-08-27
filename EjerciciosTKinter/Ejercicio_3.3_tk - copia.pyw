@@ -1,10 +1,9 @@
-
 import tkinter 
 import random
 
 ventana= tkinter.Tk()
 ventana.geometry("600x400")
-ventana.title("Juego Matematico")
+ventana.title("calculadora")
 ventana.resizable (False,False)
 
 juegos = 0
@@ -14,6 +13,17 @@ opcion_varDif=tkinter.StringVar(value='')
 dificultad = opcion_varDif.get()
 r1 = 0
 r2 = 0
+
+
+class LCDNumber:
+    def __init__(self, master):
+        self.master = master
+        self.master.title("Contador LCD")
+        self.master.geometry("300x200")
+        self.master.resizable(False, False)
+        
+        self.time_left = 60  # Tiempo inicial en segundos
+        
 
 def aleatorios():
     global juegos, r1, r2
@@ -56,22 +66,23 @@ def calcular():
    
 
     if operacion=="1":
-        
+        label_1_var.set('+')
         resultado = float(n1 + n2)
 
            
     if operacion=="2":
-    
+        label_1_var.set('-')
         resultado = float(n1 - n2)
 
 
     if operacion== '3':
-    
+        label_1_var.set('*')
         resultado = float(n1 * n2)
 
 
 
     if operacion=="4":
+        label_1_var.set('/')
         resultado = float(n1 / n2)
 
     
@@ -113,7 +124,6 @@ def clear():
 opcion_var=tkinter.StringVar(value='')
 
 
-
 label_1_var=tkinter.StringVar(value="")
 label_1= tkinter.Label(ventana, textvariable=label_1_var)
 label_1.grid(row=0,column=1, padx=5,pady=5)
@@ -138,6 +148,8 @@ label_6.grid(row=6,column=4, padx=5,pady=5)
 label_7_var=tkinter.StringVar(value="")
 label_7= tkinter.Label(ventana, textvariable=label_7_var)
 label_7.grid(row=7,column=4, padx=5,pady=5)
+
+
 
 
 

@@ -4,31 +4,17 @@ import random
 
 ventana= tkinter.Tk()
 ventana.geometry("600x400")
-ventana.title("Juego Matematico")
+ventana.title("calculadora")
 ventana.resizable (False,False)
 
 juegos = 0
 buenos = 0
 malos = 0
-opcion_varDif=tkinter.StringVar(value='')
-dificultad = opcion_varDif.get()
-r1 = 0
-r2 = 0
 
 def aleatorios():
-    global juegos, r1, r2
-    dificultad = opcion_varDif.get()
-    if dificultad == "facil":
-        r1=1
-        r2=10
-    if dificultad == "medio":
-        r1=1
-        r2=100
-    if dificultad == "dificil":
-        r1=0
-        r2=1000
-    Entry_1_var.set(random.randint(r1,r2))
-    Entry_2_var.set(random.randint(r1,r2))
+    global juegos
+    Entry_1_var.set(random.randint(1,10))
+    Entry_2_var.set(random.randint(1,10))
     radbuttn=random.randint(1,4)
     opcion_var.set(radbuttn)
     juegos+=1
@@ -52,7 +38,7 @@ def calcular():
     n1 = float(Entry_1_var.get())
     n2 = float(Entry_2_var.get())
     operacion = opcion_var.get()
-    
+    comparador= 0
    
 
     if operacion=="1":
@@ -113,7 +99,6 @@ def clear():
 opcion_var=tkinter.StringVar(value='')
 
 
-
 label_1_var=tkinter.StringVar(value="")
 label_1= tkinter.Label(ventana, textvariable=label_1_var)
 label_1.grid(row=0,column=1, padx=5,pady=5)
@@ -153,27 +138,17 @@ button_2 = tkinter.Button(ventana, text="Nuevo Numero",command=aleatorios)
 button_2.grid(row=1,column=3)
 
 
-rdbttn_1=tkinter.Radiobutton(ventana,text='sumar',variable=opcion_var,value="1",state="disabled")
+rdbttn_1=tkinter.Radiobutton(ventana,text='sumar',variable=opcion_var,value="1")
 rdbttn_1.grid(row=1,column=0, padx=5,pady=5)
 
-rdbttn_2=tkinter.Radiobutton(ventana,text='restar',variable=opcion_var,value="2",state="disabled")
+rdbttn_2=tkinter.Radiobutton(ventana,text='restar',variable=opcion_var,value="2")
 rdbttn_2.grid(row=2,column=0, padx=5,pady=5)
 
-rdbttn_3=tkinter.Radiobutton(ventana,text='multiplicar',variable=opcion_var,value="3",state="disabled")
+rdbttn_3=tkinter.Radiobutton(ventana,text='multiplicar',variable=opcion_var,value="3")
 rdbttn_3.grid(row=3,column=0, padx=5,pady=5)
 
-rdbttn_4=tkinter.Radiobutton(ventana,text='dividir',variable=opcion_var,value="4",state="disabled")
+rdbttn_4=tkinter.Radiobutton(ventana,text='dividir',variable=opcion_var,value="4")
 rdbttn_4.grid(row=4,column=0, padx=5,pady=5)
-
-rdbttn_5=tkinter.Radiobutton(ventana,text='facil',variable=opcion_varDif,value="facil")
-rdbttn_5.grid(row=8,column=1, padx=5,pady=5)
-
-rdbttn_6=tkinter.Radiobutton(ventana,text='medio',variable=opcion_varDif,value="medio")
-rdbttn_6.grid(row=8,column=2, padx=5,pady=5)
-
-rdbttn_7=tkinter.Radiobutton(ventana,text='dificil',variable=opcion_varDif,value="dificil")
-rdbttn_7.grid(row=8,column=3, padx=5,pady=5)
-
 
 
 
